@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <audio src="song.mp3" autoplay ></audio>
+  <audio id="bgm" src="your-audio-file.mp3" autoplay muted loop></audio>
 
     <div id="wrapper">
         <div class="flag__birthday">
@@ -255,6 +255,13 @@
     close.addEventListener('click', function () {
         boxmail.classList.remove('active')
     })
+
+     window.addEventListener('click', () => {
+    const audio = document.getElementById('bgm');
+    audio.muted = false;  // unmute
+    audio.play();         // ensure playback starts
+  });
 </script>
+    
 
 </html>
